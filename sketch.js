@@ -22,27 +22,27 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    box1 = new Polygon(50, 200, 40, 40);
-    slingshot = new Launcher (box1.body, {x:50, y:200});
+    box1 = new Polygon(150, 100, 40, 40);
+    slingshot = new Launcher (box1.body, {x:150, y:100});
 
     ground = new Ground(600,390,1200,20);
 
-    stand1 = new Ground (390, 300, 250, 10);
+    stand1 = new Ground (420, 300, 250, 10);
     stand2 = new Ground (700, 200, 200, 10);
 
-    for(var I = 300; I<481; I=I+30){
+    for(var I = 330; I<511; I=I+30){
         boxes.push(new Box (I, 275, 30, 40, "lightblue"));
     }
 
-    for(var I = 330; I<451; I=I+30){
+    for(var I = 360; I<481; I=I+30){
         boxes.push(new Box (I, 235, 30, 40, "pink"));
     }
 
-    for(var I = 360; I<421; I=I+30){
+    for(var I = 390; I<451; I=I+30){
         boxes.push(new Box (I, 195, 30, 40, "purple"));
     }
 
-    for(var I = 390; I<391; I=I+30){
+    for(var I = 420; I<421; I=I+30){
         boxes.push(new Box (I, 155, 30, 40, "red"));
     }
 
@@ -96,14 +96,14 @@ function mouseDragged (){
 function mouseReleased (){
     slingshot.fly();
 }
-/*
+
 function keyPressed (){
     if (keyCode==32){
-        slingshot.attach(this.box1);
+        slingshot.attach(box1.body);
     }
 }
 
-
+/*
 async function getBackground() {
     var response = await fetch ("http://worldtimeapi.org/api/timezone/Asia/Tokyo");
     var responseJSON = await response.json();
