@@ -62,7 +62,7 @@ function setup(){
 }
 
 function draw(){
-    /*
+    
     if (getBackground()){
         background ("white");
         console.log("white");
@@ -70,8 +70,7 @@ function draw(){
         background(0);
         console.log("black");
     }
-    */
-   background("lightgreen");
+
     Engine.update(engine);
     ground.display();
 
@@ -103,7 +102,7 @@ function keyPressed (){
     }
 }
 
-/*
+
 async function getBackground() {
     var response = await fetch ("http://worldtimeapi.org/api/timezone/Asia/Tokyo");
     var responseJSON = await response.json();
@@ -118,4 +117,3 @@ async function getBackground() {
   
     }
 }
-*/
